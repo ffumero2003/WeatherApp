@@ -1,0 +1,40 @@
+.weather-details {
+  background-color: lightgray;
+  padding: 20px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.weather-details p {
+  font-size: 20px;
+}
+
+.weather-image {
+  text-align: center;
+}
+
+.weather-image img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .weather-details {
+    padding: 15px;
+  }
+
+  .weather-details p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .weather-details {
+    padding: 30px;
+  }
+
+  .weather-details p {
+    font-size: 24px;
+  }
+}
