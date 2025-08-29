@@ -6,7 +6,7 @@ function WeatherSearch() {
   const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
   const [weatherData, setWeatherData] = useState(null);
-  const [savedCities, setSavedCities] = useState([]); // ✅ Stores saved cities
+  const [savedCities, setSavedCities] = useState([]); 
 
   const debounce = (func, delay) => {
     let timeout;
@@ -105,14 +105,14 @@ function WeatherSearch() {
         ))}
       </ul>
 
-      {/* Buttons for Clear & Save */}
+      
       {weatherData && (
         <div className="buttons">
           <button onClick={handleSave} className="save-btn">Save</button>
         </div>
       )}
 
-      {/* Weather Details */}
+   
       {weatherData && weatherData.main ? (
         <div className="weather-details">
           <h2>Weather in {weatherData.name}</h2>
@@ -134,14 +134,14 @@ function WeatherSearch() {
         <p>Invalid API Key. Please check your API configuration.</p>
       ) : null}
 
-      {/* Saved Cities Section */}
+      
       {savedCities.length > 0 && (
         <div className="saved-cities">
           <h2>Saved Cities</h2>
           <div className="cities-grid">
             {savedCities.map((city, index) => (
               <div key={index} className="city-card">
-                <button className="remove-btn" onClick={() => removeCity(index)}>X</button> {/* ✅ Remove Button */}
+                <button className="remove-btn" onClick={() => removeCity(index)}>X</button> 
                 <h3>{city.name}</h3>
                 <p>Main Temp: {city.main.temp}°C</p>
                 <p>Feels Like: {weatherData.main.feels_like}°C</p>
