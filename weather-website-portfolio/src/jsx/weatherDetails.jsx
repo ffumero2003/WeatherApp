@@ -61,7 +61,7 @@ function WeatherDetails() {
           <p>Sunrise: {weatherData.sys?.sunrise ? new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString() : "N/A"}</p>
           <p>Sunset: {weatherData.sys?.sunset ? new Date(weatherData.sys.sunset * 1000).toLocaleTimeString() : "N/A"}</p>
 
-          {/* Weather Icon */}
+          
           {weatherData.weather?.[0]?.icon && (
             <img 
               src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
